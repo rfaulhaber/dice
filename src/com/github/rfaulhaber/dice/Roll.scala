@@ -9,7 +9,11 @@ case class Roll(each: List[Int]) {
 
   def min: Int = this.each.min
 
-  def mkString: String = "Sum: " + this.sum + "; " + (this.each mkString ", ")
+  def mkString: String =
+    "Sum: " + this.sum +
+      "\nRolls: " + (this.each mkString ", ") +
+      "\nMin: " + this.min +
+      "\nMax: " + this.max
 }
 
 object Roll {
